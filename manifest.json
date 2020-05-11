@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "Проверка на фишинг",
+	"description": "Проверка на фишинг",
+	"version": "1.0.0",
+  "icons": {"128": "icon_128.png"},
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+  },
+  "permissions": [
+      "storage",
+      "<all_urls>"
+    ],
+  "externally_connectable": { "matches": ["*://*.reg.ru/whois/*"] },
+  "content_scripts": [
+      {   
+          "matches": ["<all_urls>"],
+          "js": ["popup.js"]
+      }
+  ],
+  "background": { "scripts": ["background.js"] }
+}

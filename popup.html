@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<!--Начало первого блока объяснения кода-->
+<head>
+  <meta charset="utf-8">
+  <title>Проверка на фишинг</title>
+  <!--ссылаемся на шрифты, используемые в документе-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <!--здесь мы ссылаемся на стили, которые будем использовать в документе, а именно стиль иконок-->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+  <!--конец объяснения блока со стилями-->
+  <script src="popup.js"></script>
+</head>
+<!--объяснение тега <body>-->
+<body>
+  <!--контейнер, содержащий название, логотип и номер версии-->
+  <div class="modal-header">
+    <h1 class="logo">
+      <img class="logo-icon" src="./images/sberbank-logo.png">Проверка сайта на фишинг
+    </h1>
+  </div>
+  <!--Конец контейнера-->
+  <!--контейнер, содержащий описание функций расширения-->
+  <div class="modal-content">
+    <div>
+      <div class='field'>
+        <div>Скопированные элементы</div>
+        <div>
+          <img id='coppy' src="./images/good.png">
+        </div>
+      </div>
+      <div class='field'>
+        <div>Поля для ввода логина, пароля или телефона</div>
+        <div>
+          <img id='forms' src="./images/good.png">
+        </div>
+      </div>
+      <div class='field'>
+        <div>Недавно зарегестророванный домен</div>
+        <div>
+          <img id='date' src="./images/good.png">
+        </div>
+      </div>
+      <div class='field'>
+        <div>Наличие логотипа</div>
+        <div>
+          <img id='logo' src="./images/good.png">
+        </div>
+      </div>
+      <div class='field'>
+        <div>Анализ изображений</div>
+        <div>
+          <img id='imgs' src="./images/good.png">  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='field result'>
+    <div>Вероятность фишинга</div>
+    <div id='result'>0%</div>
+  </div>
+  <!--Конец контейнера-->
+</body>
+</html>
